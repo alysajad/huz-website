@@ -407,7 +407,7 @@ const PillNav = ({
 
       <div
         ref={mobileMenuRef}
-        className="md:hidden absolute top-[4.5em] left-4 right-4 rounded-3xl shadow-2xl z-[998] origin-top border border-white/10 backdrop-blur-xl"
+        className="md:hidden absolute top-[4.5em] left-4 right-4 rounded-3xl shadow-2xl z-[998] origin-top border border-white/10 backdrop-blur-xl pointer-events-auto"
         style={{
           ...cssVars,
           background: 'rgba(0, 0, 0, 0.8)'
