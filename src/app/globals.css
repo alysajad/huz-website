@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-on-secondary-container: #007151;
+  --color-secondary: #006c4e;
+  --color-tertiary-container: #8c5400;
+  --color-on-tertiary-fixed: #2b1700;
+  --color-surface-container-high: #eae8e4;
+  --color-tertiary-fixed-dim: #ffb869;
+  --color-on-primary-fixed: #002117;
+  --color-secondary-container: #83f5c6;
+  --color-primary-container: #0f6e56;
+  --color-surface-container-highest: #e4e2de;
+  --color-error-container: #ffdad6;
+  --color-on-tertiary-fixed-variant: #673d00;
+  --color-outline: #6f7a74;
+  --color-inverse-surface: #30312e;
+  --color-tertiary-fixed: #ffdcbb;
+  --color-on-secondary-fixed-variant: #00513a;
+  --color-surface-bright: #fbf9f5;
+  --color-on-primary: #ffffff;
+  --color-on-background: #1b1c1a;
+  --color-on-primary-fixed-variant: #00513e;
+  --color-on-error: #ffffff;
+  --color-surface-container-low: #f5f3ef;
+  --color-on-surface: #1b1c1a;
+  --color-surface-dim: #dbdad6;
+  --color-on-tertiary: #ffffff;
+  --color-secondary-fixed: #86f8c9;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #9aedcf;
+  --color-surface-variant: #e4e2de;
+  --color-primary-fixed: #a0f3d4;
+  --color-surface: #fbf9f5;
+  --color-error: #ba1a1a;
+  --color-on-error-container: #93000a;
+  --color-inverse-primary: #84d6b9;
+  --color-outline-variant: #bec9c3;
+  --color-on-secondary-fixed: #002115;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #efeeea;
+  --color-inverse-on-surface: #f2f0ed;
+  --color-secondary-fixed-dim: #68dbae;
+  --color-background: #fbf9f5;
+  --color-primary: #005440;
+  --color-surface-tint: #086b53;
+  --color-on-surface-variant: #3f4944;
+  --color-on-tertiary-container: #ffd5ac;
+  --color-primary-fixed-dim: #84d6b9;
+  --color-tertiary: #6b3f00;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.glass-panel {
+  background: rgba(251, 249, 245, 0.6);
+  backdrop-filter: blur(20px);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.perspective-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+}
+.perspective-card:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+}
+.geometric-veil {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.598 15h15l-12.11 8.794L38.083 45 30 36.206 21.917 45l2.595-21.206L12.402 15h15L30 0z' fill='%23bec9c3' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
