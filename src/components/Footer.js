@@ -16,7 +16,7 @@ export default function Footer() {
           <Link href="#" className="font-sans text-sm tracking-wide text-emerald-300/70 hover:text-emerald-100 transition-colors">Privacy Policy</Link>
           <Link href="#" className="font-sans text-sm tracking-wide text-emerald-300/70 hover:text-emerald-100 transition-colors">Terms of Service</Link>
           <Link href="/umrah" className="font-sans text-sm tracking-wide text-emerald-300/70 hover:text-emerald-100 transition-colors">Hajj & Umrah Guide</Link>
-          <Link href="#" className="font-sans text-sm tracking-wide text-emerald-300/70 hover:text-emerald-100 transition-colors">Contact Support</Link>
+          <Link href="/#contact" className="font-sans text-sm tracking-wide text-emerald-950 bg-emerald-400 hover:bg-emerald-300 px-4 py-2 rounded font-bold transition-colors shadow-lg">Contact Us</Link>
         </div>
         <div className="mt-8 md:mt-0 flex gap-6">
           <Link href="#" className="text-emerald-300/70 hover:text-amber-400 transition-colors">
