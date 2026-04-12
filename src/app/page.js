@@ -2,6 +2,7 @@ import Link from "next/link";
 import Stack from "@/components/Stack";
 import TeamCard from "@/components/TeamCard";
 import BookingForm from "@/components/BookingForm";
+import ReviewsSlider from "@/components/ReviewsSlider";
 
 export default function Home() {
   return (
@@ -146,8 +147,8 @@ export default function Home() {
                 <p className="text-sm text-on-surface-variant">Years of excellence in hospitality.</p>
               </div>
               <div className="p-6 bg-surface-container-highest rounded-lg border border-outline-variant/10">
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">star</span>
-                <h4 className="font-bold text-primary mb-2">4.5★ Rating</h4>
+                <span className="material-symbols-outlined text-primary text-4xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <h4 className="font-bold text-primary mb-2">4.8★ Rating</h4>
                 <p className="text-sm text-on-surface-variant">Trusted by thousands of travelers.</p>
               </div>
             </div>
@@ -212,6 +213,23 @@ export default function Home() {
             <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-tertiary-container rounded-2xl -z-0 opacity-20"></div>
             <div className="absolute -top-10 -left-10 w-1/3 aspect-square border border-primary/20 rounded-2xl -z-0"></div>
           </div>
+        </div>
+        
+        {/* Customer Google Reviews Section */}
+        <div className="max-w-7xl mx-auto px-6 mt-32">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-primary mb-4 flex items-center justify-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" className="w-10 h-10" />
+              Customer Voices
+            </h2>
+            <div className="w-24 h-1 bg-tertiary mx-auto opacity-30 mt-4 mb-4"></div>
+            <p className="text-on-surface-variant">Real reviews from our travelers experiencing the spiritual and scenic beauty with us.</p>
+            <div className="flex items-center justify-center gap-2 mt-4 text-amber-400 text-2xl">
+              4.8 <span>★★★★★</span> <span className="text-sm text-on-surface-variant font-medium ml-2">(120+ Reviews)</span>
+            </div>
+          </div>
+          
+          <ReviewsSlider />
         </div>
       </section>
 

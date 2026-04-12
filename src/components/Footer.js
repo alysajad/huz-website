@@ -31,7 +31,20 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="px-12 pb-8 text-center border-t border-emerald-900/10 pt-8">
+      <div className="w-full px-12 pt-8 pb-4 max-w-7xl mx-auto">
+        <div className="rounded-xl overflow-hidden border border-emerald-900/30 shadow-2xl">
+          <iframe 
+            src="https://maps.google.com/maps?q=34.092884377213,74.58731019882507&hl=en&z=14&output=embed" 
+            width="100%" 
+            height="250" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div className="px-12 pb-8 text-center border-t border-emerald-900/10 pt-8 mt-4">
         <p className="font-sans text-xs tracking-wide text-emerald-300/40">© 2026 Huz Point Tours & Travels. Journey with Faith. All rights reserved.</p>
       </div>
     </footer>
