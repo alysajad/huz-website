@@ -109,145 +109,168 @@ export default function UmrahPage() {
             </h2>
             <div className="w-24 h-1 bg-tertiary mx-auto opacity-50"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-surface-container-low p-8 rounded-xl flex flex-col hover:translate-y-[-8px] transition-all duration-300">
-              <h3 className="text-2xl font-serif text-primary mb-2">Economy</h3>
-              <p className="text-sm text-outline mb-6 font-medium tracking-tight">
-                Essential comfort for devout seekers
-              </p>
-              <div className="mb-8">
-                <span className="text-4xl font-serif text-on-surface">
-                  ₹1,55,000
-                </span>
-                <span className="text-outline text-sm">/person</span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="hotel"
-                  >
-                    hotel
-                  </span>
-                  3-Star Hotels (800m+ distance)
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="restaurant"
-                  >
-                    restaurant
-                  </span>
-                  Daily Buffet Meals
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="directions_bus"
-                  >
-                    directions_bus
-                  </span>
-                  Standard Shared Transport
-                </li>
-              </ul>
-              <a href="#booking" className="w-full py-3 rounded-xl border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors block text-center">
-                Select Economy
-              </a>
-            </div>
 
-            <div className="bg-primary text-on-primary p-8 rounded-xl flex flex-col scale-105 shadow-2xl relative overflow-hidden group">
-              <div className="absolute top-4 right-4 bg-tertiary text-white text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">
-                Recommended
+          {/* ── Hajj 2026 ── */}
+          <div className="mb-12">
+            <h3 className="text-xs font-bold tracking-[0.3em] uppercase text-tertiary mb-6 text-center">Hajj 2026</h3>
+            <div className="max-w-lg mx-auto">
+              <div className="bg-primary text-on-primary p-10 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-4 right-4 bg-tertiary text-white text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">
+                  Limited Seats
+                </div>
+                <span className="material-symbols-outlined text-5xl text-on-primary/60 mb-4">mosque</span>
+                <h4 className="text-3xl font-serif mb-1">Shifting Package</h4>
+                <p className="text-on-primary/70 text-sm mb-8">Full Hajj package with hotel shifting between Mecca, Mina & Arafat. Includes visa, flights, accommodation & Qafila leaders.</p>
+                <div className="mb-8">
+                  <span className="text-5xl font-serif">₹6,50,000</span>
+                  <span className="text-on-primary/60 text-sm ml-1">/person</span>
+                </div>
+                <ul className="space-y-3 mb-10 text-left w-full max-w-sm">
+                  <li className="flex items-center gap-3 text-sm">
+                    <span className="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                    Hajj Visa & Return Flights
+                  </li>
+                  <li className="flex items-center gap-3 text-sm">
+                    <span className="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                    Hotel Shifting — Mecca, Mina & Arafat
+                  </li>
+                  <li className="flex items-center gap-3 text-sm">
+                    <span className="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                    Dedicated Kashmiri Qafila Leaders
+                  </li>
+                  <li className="flex items-center gap-3 text-sm">
+                    <span className="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                    All Rituals Guidance & Transport
+                  </li>
+                </ul>
+                <a href="#booking" className="w-full py-4 rounded-xl bg-tertiary text-white font-medium hover:scale-95 transition-transform block text-center text-sm uppercase tracking-widest">
+                  Reserve Hajj Seat
+                </a>
               </div>
-              <h3 className="text-2xl font-serif mb-2">Standard</h3>
-              <p className="text-sm text-on-primary-container mb-6 font-medium tracking-tight">
-                The perfect balance of proximity and price
-              </p>
-              <div className="mb-8">
-                <span className="text-4xl font-serif">₹2,05,000</span>
-                <span className="text-on-primary-container text-sm">
-                  /person
-                </span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-secondary-fixed text-lg"
-                    data-icon="hotel"
-                  >
-                    hotel
-                  </span>
-                  4-Star Hotels (Closer to Haram)
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-secondary-fixed text-lg"
-                    data-icon="directions_car"
-                  >
-                    directions_car
-                  </span>
-                  Private Group Transfers
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-secondary-fixed text-lg"
-                    data-icon="explore"
-                  >
-                    explore
-                  </span>
-                  Dedicated Local Guide
-                </li>
-              </ul>
-              <a href="#booking" className="w-full py-3 rounded-xl bg-tertiary text-white font-medium hover:scale-95 transition-transform block text-center">
-                Book Standard
-              </a>
-            </div>
-
-            <div className="bg-surface-container-low p-8 rounded-xl flex flex-col hover:translate-y-[-8px] transition-all duration-300">
-              <h3 className="text-2xl font-serif text-primary mb-2">Premium</h3>
-              <p className="text-sm text-outline mb-6 font-medium tracking-tight">
-                Utmost serenity and VIP care
-              </p>
-              <div className="mb-8">
-                <span className="text-4xl font-serif text-on-surface">
-                  ₹3,30,000
-                </span>
-                <span className="text-outline text-sm">/person</span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-grow">
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="hotel"
-                  >
-                    hotel
-                  </span>
-                  5-Star Front-Row Hotels
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="airport_shuttle"
-                  >
-                    airport_shuttle
-                  </span>
-                  VIP Private Transport
-                </li>
-                <li className="flex items-center gap-3 text-sm">
-                  <span
-                    className="material-symbols-outlined text-primary text-lg"
-                    data-icon="person_celebration"
-                  >
-                    person_celebrate
-                  </span>
-                  Personal Concierge Guide
-                </li>
-              </ul>
-              <a href="#booking" className="w-full py-3 rounded-xl border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors block text-center">
-                Inquire VIP
-              </a>
             </div>
           </div>
+
+          {/* ── Umrah Packages ── */}
+          <div>
+            <h3 className="text-xs font-bold tracking-[0.3em] uppercase text-tertiary mb-6 text-center">Umrah Packages</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+              {/* Umrah Only */}
+              <div className="bg-surface-container-low p-7 rounded-xl flex flex-col hover:translate-y-[-6px] transition-all duration-300 border border-outline-variant/20">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-secondary mb-2">Umrah Only</span>
+                <h4 className="text-2xl font-serif text-primary mb-1">Essential</h4>
+                <p className="text-xs text-outline mb-6 leading-relaxed">Core Umrah — Mecca & Madinah with guided Ziyarat</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-serif text-on-surface">₹1,10,000</span>
+                  <span className="text-outline text-xs ml-1">/person</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">hotel</span>
+                    Standard Hotels
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">flight</span>
+                    Return Flights
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">verified</span>
+                    Umrah Visa
+                  </li>
+                </ul>
+                <a href="#booking" className="w-full py-3 rounded-xl border border-primary text-primary text-xs font-medium hover:bg-primary hover:text-white transition-colors block text-center uppercase tracking-widest">
+                  Select
+                </a>
+              </div>
+
+              {/* Economy */}
+              <div className="bg-surface-container-low p-7 rounded-xl flex flex-col hover:translate-y-[-6px] transition-all duration-300 border border-outline-variant/20">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-secondary mb-2">Umrah</span>
+                <h4 className="text-2xl font-serif text-primary mb-1">Economy</h4>
+                <p className="text-xs text-outline mb-6 leading-relaxed">Essential comfort for devout seekers</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-serif text-on-surface">₹1,20,000</span>
+                  <span className="text-outline text-xs ml-1">/person</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">hotel</span>
+                    3-Star Hotels
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">restaurant</span>
+                    Daily Buffet Meals
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">directions_bus</span>
+                    Shared Transport
+                  </li>
+                </ul>
+                <a href="#booking" className="w-full py-3 rounded-xl border border-primary text-primary text-xs font-medium hover:bg-primary hover:text-white transition-colors block text-center uppercase tracking-widest">
+                  Select
+                </a>
+              </div>
+
+              {/* Semi Deluxe — highlighted */}
+              <div className="bg-primary text-on-primary p-7 rounded-xl flex flex-col shadow-2xl relative overflow-hidden scale-[1.03]">
+                <div className="absolute top-4 right-4 bg-tertiary text-white text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tight font-bold">Popular</div>
+                <span className="text-[10px] font-bold tracking-widest uppercase text-on-primary/60 mb-2">Umrah</span>
+                <h4 className="text-2xl font-serif mb-1">Semi Deluxe</h4>
+                <p className="text-xs text-on-primary/70 mb-6 leading-relaxed">The perfect balance of comfort & price</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-serif">₹1,30,000</span>
+                  <span className="text-on-primary/60 text-xs ml-1">/person</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-secondary-fixed text-base">hotel</span>
+                    4-Star Hotels (Closer to Haram)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-secondary-fixed text-base">directions_car</span>
+                    Private Group Transfers
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-secondary-fixed text-base">explore</span>
+                    Dedicated Local Guide
+                  </li>
+                </ul>
+                <a href="#booking" className="w-full py-3 rounded-xl bg-tertiary text-white text-xs font-medium hover:scale-95 transition-transform block text-center uppercase tracking-widest">
+                  Book This
+                </a>
+              </div>
+
+              {/* Deluxe */}
+              <div className="bg-surface-container-low p-7 rounded-xl flex flex-col hover:translate-y-[-6px] transition-all duration-300 border border-tertiary/30">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-tertiary mb-2">Umrah</span>
+                <h4 className="text-2xl font-serif text-primary mb-1">Deluxe</h4>
+                <p className="text-xs text-outline mb-6 leading-relaxed">Maximum serenity & premium care</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-serif text-tertiary">₹1,40,000</span>
+                  <span className="text-outline text-xs ml-1">/person</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">hotel</span>
+                    5-Star Front-Row Hotels
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">airport_shuttle</span>
+                    VIP Private Transport
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base">person_celebrate</span>
+                    Personal Concierge Guide
+                  </li>
+                </ul>
+                <a href="#booking" className="w-full py-3 rounded-xl border border-tertiary text-tertiary text-xs font-medium hover:bg-tertiary hover:text-white transition-colors block text-center uppercase tracking-widest">
+                  Select
+                </a>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 

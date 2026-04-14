@@ -50,7 +50,7 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-primary mb-4">Kashmir Explorer</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Essential sights including Srinagar, Gulmarg, and the serenity of Pahalgam valleys.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-2xl font-serif text-tertiary">₹12,999</span>
+                  <span className="text-2xl font-serif text-tertiary">₹5,999</span>
                   <Link href="/kashmir" className="text-primary font-bold flex items-center gap-2 group/btn">
                     Details <span className="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
                   </Link>
@@ -68,7 +68,7 @@ export default function Home() {
                 <h3 className="font-serif text-3xl text-primary mb-4">Kashmir Classic</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Full immersion with Shikara rides, heritage tours, and premium houseboat stays.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-3xl font-serif text-tertiary">₹24,999</span>
+                  <span className="text-3xl font-serif text-tertiary">₹10,999</span>
                   <Link href="/kashmir" className="inline-block bg-primary text-on-primary px-5 py-2 rounded text-sm hover:bg-primary-container transition-colors">Book Classic</Link>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-primary mb-4">Kashmir Royale</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Ultra-luxury stay in 5-star resorts, private transfers, and curated off-beat experiences.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-2xl font-serif text-tertiary">₹49,999</span>
+                  <span className="text-2xl font-serif text-tertiary">₹19,999</span>
                   <Link href="/kashmir" className="text-primary font-bold flex items-center gap-2 group/btn">
                     Details <span className="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
                   </Link>
@@ -246,29 +246,29 @@ export default function Home() {
           {/* Centered responsive grid for luxury Team Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <TeamCard 
-              name="Tahir Ahmad" 
-              role="Founder & CEO" 
-              imageUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+              name="Haji Mohamad Ashraf" 
+              role="CEO & Owner — Est. 1999" 
+              imageUrl="/ashraf.jpg"
             />
             <TeamCard 
-              name="Aisha Malik" 
-              role="Head of Hajj & Umrah" 
-              imageUrl="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+              name="Karrar Hussain Sofi" 
+              role="Managing Director" 
+              imageUrl="/karrar.jpg"
             />
             <TeamCard 
-              name="Zaid Ali" 
-              role="Lead Destinations Guide" 
-              imageUrl="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&q=80"
+              name="Mr. Shahsaab" 
+              role="Ticketing & Visa Head" 
+              imageUrl="/shahsaab.jpg"
             />
             <TeamCard 
-              name="Fatima Noor" 
-              role="Customer Experience" 
-              imageUrl="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+              name="Mrs. Sumaira" 
+              role="Sales Manager" 
+              imageUrl="/sumaira.png"
             />
             <TeamCard 
-              name="Irfan Bhat" 
-              role="Logistics Manager" 
-              imageUrl="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
+              name="Ms. Aliya" 
+              role="Accountant" 
+              imageUrl="/aliya.png"
             />
           </div>
         </div>

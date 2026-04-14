@@ -10,7 +10,7 @@ const TeamCard = ({ imageUrl, name, role, instagram = '#', twitter = '#' }) => {
         <img
           src={imageUrl}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 filter grayscale brightness-90 group-hover:filter-none group-hover:brightness-100"
+          className="w-full h-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-110 filter grayscale brightness-90 group-hover:filter-none group-hover:brightness-100"
         />
       </div>
 

@@ -66,125 +66,9 @@ export default function ZiyaratPage() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="perspective-card glass-panel p-8 rounded-xl flex flex-col h-full border border-white/20 shadow-sm">
-              <div className="mb-6">
-                <span className="text-xs font-label uppercase tracking-widest text-secondary font-semibold">
-                  Iraq Focus
-                </span>
-                <h3 className="font-headline text-3xl text-primary mt-2">
-                  Spiritual Path
-                </h3>
-              </div>
-              <ul className="space-y-4 mb-12 flex-grow">
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    location_on
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Najaf, Karbala, Kadhimiya, Samarra
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    calendar_today
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    12 Days / 11 Nights
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    hotel
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Premium stay near Shrines
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    groups
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Kashmiri Group Qafila leaders
-                  </span>
-                </li>
-              </ul>
-              <div className="pt-6 border-t border-outline-variant/30">
-                <p className="text-sm font-label text-on-surface-variant/60 uppercase mb-1">
-                  Investment
-                </p>
-                <p className="text-2xl font-headline text-primary font-semibold">
-                  ₹65,000
-                  <span className="text-sm font-body font-normal text-on-surface-variant">
-                    /person
-                  </span>
-                </p>
-                <a href="#booking" className="w-full mt-6 bg-surface-container-highest text-primary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-center block">
-                  Select Journey
-                </a>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            <div className="perspective-card bg-primary-container p-8 rounded-xl flex flex-col h-full relative overflow-hidden shadow-xl transform md:-translate-y-4">
-              <div className="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-tighter">
-                Limited Slots - Arbaeen 2026
-              </div>
-              <div className="mb-6">
-                <span className="text-xs font-label uppercase tracking-widest text-on-primary-container/80 font-semibold">
-                  Special Edition
-                </span>
-                <h3 className="font-headline text-3xl text-on-primary-container mt-2">
-                  Arbaeen Walk
-                </h3>
-              </div>
-              <ul className="space-y-4 mb-12 flex-grow">
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary mt-0.5">
-                    directions_walk
-                  </span>
-                  <span className="text-sm font-body text-on-primary-container/90">
-                    The 80km Najaf to Karbala walk
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary mt-0.5">
-                    support_agent
-                  </span>
-                  <span className="text-sm font-body text-on-primary-container/90">
-                    Full logistical support &amp; baggage transport
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary mt-0.5">
-                    medical_services
-                  </span>
-                  <span className="text-sm font-body text-on-primary-container/90">
-                    Dedicated medical aid &amp; onsite guides
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary mt-0.5">
-                    night_shelter
-                  </span>
-                  <span className="text-sm font-body text-on-primary-container/90">
-                    Mawkib arrangements &amp; spiritual majalis
-                  </span>
-                </li>
-              </ul>
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-sm font-label text-on-primary-container/60 uppercase mb-1">
-                  Investment
-                </p>
-                <p className="text-2xl font-headline text-on-primary-container font-semibold">
-                  Special Group Pricing
-                </p>
-                <a href="#booking" className="w-full mt-6 bg-tertiary text-on-tertiary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-tertiary-container transition-all text-center block">
-                  Request Quote
-                </a>
-              </div>
-            </div>
-
+            {/* Iran + Iraq — 3 tiers */}
             <div className="perspective-card glass-panel p-8 rounded-xl flex flex-col h-full border border-white/20 shadow-sm">
               <div className="mb-6">
                 <span className="text-xs font-label uppercase tracking-widest text-secondary font-semibold">
@@ -193,56 +77,106 @@ export default function ZiyaratPage() {
                 <h3 className="font-headline text-3xl text-primary mt-2">
                   Grand Ziyarat
                 </h3>
+                <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  A complete spiritual journey covering the holy shrines of Iraq (Karbala, Najaf, Kadhimiya, Samarra) and Iran (Mashhad, Qom).
+                </p>
               </div>
-              <ul className="space-y-4 mb-12 flex-grow">
+              <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    explore
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Iraq (Karbala, Najaf) + Iran (Mashhad, Qom)
-                  </span>
+                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">explore</span>
+                  <span className="text-sm font-body text-on-surface-variant">Iraq (Karbala, Najaf, Kadhimiya, Samarra)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    flight_takeoff
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Internal flights between Iraq/Iran included
-                  </span>
+                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">mosque</span>
+                  <span className="text-sm font-body text-on-surface-variant">Iran (Mashhad, Qom)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    event_repeat
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    21 Days Comprehensive Itinerary
-                  </span>
+                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">groups</span>
+                  <span className="text-sm font-body text-on-surface-variant">Kashmiri Group Qafila leaders</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">
-                    diamond
-                  </span>
-                  <span className="text-sm font-body text-on-surface-variant">
-                    Premium Hotels &amp; Private Transport
-                  </span>
+                  <span className="material-symbols-outlined text-tertiary-container mt-0.5">menu_book</span>
+                  <span className="text-sm font-body text-on-surface-variant">Scheduled Majalis & spiritual sessions</span>
                 </li>
               </ul>
+
+              {/* 3 pricing tiers */}
               <div className="pt-6 border-t border-outline-variant/30">
-                <p className="text-sm font-label text-on-surface-variant/60 uppercase mb-1">
-                  Investment
-                </p>
-                <p className="text-2xl font-headline text-primary font-semibold">
-                  ₹1,10,000
-                  <span className="text-sm font-body font-normal text-on-surface-variant">
-                    /person
-                  </span>
-                </p>
+                <p className="text-sm font-label text-on-surface-variant/60 uppercase mb-4 tracking-widest">Select Your Tier</p>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="rounded-lg border border-outline-variant/40 p-4 text-center hover:border-primary hover:bg-primary/5 transition-all cursor-pointer">
+                    <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Economy</p>
+                    <p className="text-xl font-headline text-primary font-semibold">₹1,20,000</p>
+                    <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                  </div>
+                  <div className="rounded-lg border-2 border-primary bg-primary/5 p-4 text-center shadow-md relative cursor-pointer">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tight whitespace-nowrap">Popular</div>
+                    <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Semi Deluxe</p>
+                    <p className="text-xl font-headline text-primary font-semibold">₹1,30,000</p>
+                    <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                  </div>
+                  <div className="rounded-lg border border-tertiary/40 bg-tertiary/5 p-4 text-center hover:border-tertiary hover:bg-tertiary/10 transition-all cursor-pointer">
+                    <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Deluxe</p>
+                    <p className="text-xl font-headline text-tertiary font-semibold">₹1,50,000</p>
+                    <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                  </div>
+                </div>
                 <a href="#booking" className="w-full mt-6 bg-surface-container-highest text-primary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-center block">
-                  Select Journey
+                  Book Iraq + Iran
                 </a>
               </div>
             </div>
+
+            {/* Arbaeen Walk */}
+            <div className="perspective-card bg-primary-container p-8 rounded-xl flex flex-col h-full relative overflow-hidden shadow-xl">
+              <div className="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-tighter">
+                Limited Slots — Arbaeen 2026
+              </div>
+              <div className="mb-6">
+                <span className="text-xs font-label uppercase tracking-widest text-on-primary-container/80 font-semibold">
+                  Iraq Only · Special Edition
+                </span>
+                <h3 className="font-headline text-3xl text-on-primary-container mt-2">
+                  Arbaeen Walk
+                </h3>
+                <p className="text-sm text-on-primary-container/80 mt-2 leading-relaxed">
+                  The world's largest annual peaceful gathering — the sacred 80km walk from Najaf to Karbala, honouring Imam Hussain (a.s).
+                </p>
+              </div>
+              <ul className="space-y-4 mb-12 flex-grow">
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">directions_walk</span>
+                  <span className="text-sm font-body text-on-primary-container/90">The 80km Najaf to Karbala walk</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">calendar_today</span>
+                  <span className="text-sm font-body text-on-primary-container/90">15 Days full itinerary</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">support_agent</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Full logistical support & baggage transport</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">medical_services</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Dedicated medical aid & onsite guides</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">night_shelter</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Mawkib arrangements & spiritual majalis</span>
+                </li>
+              </ul>
+              <div className="pt-6 border-t border-white/10">
+                <p className="text-sm font-label text-on-primary-container/60 uppercase mb-1">Investment</p>
+                <p className="text-4xl font-headline text-on-primary-container font-semibold">
+                  ₹1,15,000
+                  <span className="text-sm font-body font-normal text-on-primary-container/70 ml-1">/person</span>
+                </p>
+                <a href="#booking" className="w-full mt-6 bg-tertiary text-on-tertiary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-tertiary-container transition-all text-center block">
+                  Book Arbaeen Walk
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

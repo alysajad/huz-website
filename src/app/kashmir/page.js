@@ -139,7 +139,7 @@ export default function KashmirPage() {
                         Starting at
                       </span>
                       <span className="text-2xl font-serif text-primary">
-                        ₹12,999
+                        ₹5,999
                       </span>
                     </div>
                     <a href="#booking" className="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -194,7 +194,7 @@ export default function KashmirPage() {
                         Starting at
                       </span>
                       <span className="text-2xl font-serif text-tertiary">
-                        ₹24,999
+                        ₹10,999
                       </span>
                     </div>
                     <a href="#booking" className="bg-tertiary text-on-tertiary px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest scale-98-on-click transition-transform inline-block">
@@ -246,7 +246,7 @@ export default function KashmirPage() {
                         Starting at
                       </span>
                       <span className="text-2xl font-serif text-primary">
-                        ₹49,999
+                        ₹19,999
                       </span>
                     </div>
                     <a href="#booking" className="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
