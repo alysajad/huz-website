@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const TeamCard = ({ imageUrl, name, role, instagram = '#', twitter = '#' }) => {
+const TeamCard = ({ imageUrl, name, role }) => {
   return (
     <div className="group relative w-full h-[450px] overflow-hidden rounded-md cursor-pointer flex flex-col justify-end">
       {/* Background Image Container */}
@@ -25,16 +25,6 @@ const TeamCard = ({ imageUrl, name, role, instagram = '#', twitter = '#' }) => {
         <p className="text-xs uppercase tracking-[0.2em] font-medium text-primary mb-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
           {role}
         </p>
-        
-        {/* Social Links sliding in */}
-        <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-          <Link href={instagram} className="text-on-surface-variant hover:text-primary transition-colors">
-            <span className="text-sm border-b border-primary/30 pb-1">Instagram</span>
-          </Link>
-          <Link href={twitter} className="text-on-surface-variant hover:text-primary transition-colors">
-            <span className="text-sm border-b border-primary/30 pb-1">Twitter</span>
-          </Link>
-        </div>
       </div>
 
       {/* Deco Border */}

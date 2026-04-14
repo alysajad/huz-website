@@ -256,7 +256,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <TeamCard 
               name="Haji Mohamad Ashraf" 
-              role="CEO & Owner — Est. 1999" 
+              role="CEO & Owner — Trusted since 1998"
               imageUrl="/ashraf.jpg"
             />
             <TeamCard 
