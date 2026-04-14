@@ -7,13 +7,13 @@ import ReviewsSlider from "@/components/ReviewsSlider";
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[96px] pt-[96px]">
         <div className="absolute inset-0 z-0">
-          <img alt="Dal Lake Kashmir" className="w-full h-full object-cover scale-105" src="/dal_lake_hero.png" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-surface"></div>
+          <img alt="Dal Lake Kashmir" className="w-full h-full object-cover md:scale-105" src="/dal_lake_hero.png" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-surface"></div>
         </div>
         <div className="relative z-10 text-center px-4 max-w-5xl">
-          <h1 className="font-serif text-5xl md:text-8xl font-light text-white mb-6 tracking-wide drop-shadow-2xl">
+          <h1 className="font-serif text-5xl md:text-8xl font-light text-white mb-6 tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
             Heaven on Earth, <br/>
             <span className="italic">Sacred Lands Beyond</span>
           </h1>
@@ -58,7 +58,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="perspective-card group relative rounded-xl overflow-hidden bg-white shadow-2xl scale-105 z-10 border-2 border-tertiary/20">
+            <div className="perspective-card group relative rounded-xl overflow-hidden bg-white shadow-2xl md:scale-105 z-10 border-2 border-tertiary/20">
               <div className="absolute top-4 right-4 bg-tertiary text-white text-[10px] px-3 py-1 rounded-full uppercase tracking-tighter font-bold z-20">Popular</div>
               <div className="aspect-[16/10] overflow-hidden">
                 <img alt="Srinagar Houseboat" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOQCDuZj218mgLfpXf4Ie0P54ZggCZyg9OGSVSg5EGYwY-jJGCoMFC2SlO3YCYhJGPCi0EIgPWm4bH15_4OwUmtQC8nUxf7qRPFGy4MBjVb_a510ozUK3-x3KbQxvEcX4n__dLa1_qMOqYV0Q-IJVveEfS0lQV42TYM4OH8D0hnA2Weo0L4zeI2iAhGdEhqFvxEaByS0poo8_fJf-GKYTwlX9w0KWhuLudLn6NezCjCYNUkfcDtAl7cA6h8fNyKKJxZ2hnxi8cFOWJ" />

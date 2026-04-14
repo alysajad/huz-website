@@ -86,7 +86,7 @@ const PillNav = ({
     window.addEventListener('resize', onResize);
 
     if (document.fonts?.ready) {
-      document.fonts.ready.then(layout).catch(() => {});
+      document.fonts.ready.then(layout).catch(() => { });
     }
 
     const menu = mobileMenuRef.current;
@@ -239,11 +239,10 @@ const PillNav = ({
   return (
     <div className="fixed top-0 left-0 w-full z-[9999] flex justify-center pointer-events-none transition-all duration-500 pt-4 px-4 md:px-8">
       <nav
-        className={`pointer-events-auto w-full flex items-center justify-between box-border px-6 md:px-8 transition-all duration-500 rounded-full ${
-          scrolled 
-            ? 'bg-black/80 backdrop-blur-xl border border-white/10 shadow-2xl py-3' 
+        className={`pointer-events-auto w-full flex items-center justify-between box-border px-6 md:px-8 transition-all duration-500 rounded-full ${scrolled
+            ? 'bg-black/80 backdrop-blur-xl border border-white/10 shadow-2xl py-3'
             : 'bg-transparent border border-transparent shadow-none py-4'
-        } ${className}`}
+          } ${className}`}
         aria-label="Primary"
         style={cssVars}
       >

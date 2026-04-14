@@ -1,22 +1,24 @@
 import Link from "next/link";
 import DestinationGuide from "@/components/DestinationGuide";
 import BookingForm from "@/components/BookingForm";
+import SnowEffect from "@/components/SnowEffect";
 
 export default function KashmirPage() {
   return (
     <>
       <main className="">
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[96px] pt-[96px]">
           <div className="absolute inset-0 z-0">
             <img
               alt="Gulmarg in Winter"
               className="w-full h-full object-cover"
               src="/gulmarg_winter_hero.png"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-surface"></div>
+            <SnowEffect />
           </div>
           <div className="relative z-10 text-center px-4 max-w-4xl">
-            <h1 className="font-serif text-6xl md:text-8xl text-white mb-6 drop-shadow-lg font-light italic">
+            <h1 className="font-serif text-6xl md:text-8xl text-white mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] font-light italic">
               Kashmir: The Heaven on Earth
             </h1>
             <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide font-serif mb-12">
@@ -84,7 +86,7 @@ export default function KashmirPage() {
             </h2>
             <div className="w-24 h-1 bg-tertiary mx-auto opacity-30 mt-6"></div>
           </div>
-          <div className="relative w-full z-10 px-4 md:px-0">
+          <div className="relative w-full px-4 md:px-0">
             <DestinationGuide />
           </div>
         </section>
@@ -153,7 +155,7 @@ export default function KashmirPage() {
               </div>
             </div>
 
-            <div className="group bg-tertiary p-1 rounded-2xl shadow-[0_20px_50px_rgba(107,63,0,0.15)] transition-all duration-500 hover:-translate-y-4 scale-105 z-20">
+            <div className="group bg-tertiary p-1 rounded-2xl shadow-[0_20px_50px_rgba(107,63,0,0.15)] transition-all duration-500 hover:-translate-y-4 md:scale-105 z-20">
               <div className="bg-surface-container-lowest rounded-xl overflow-hidden h-full flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img

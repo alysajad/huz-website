@@ -212,7 +212,7 @@ export default function UmrahPage() {
               </div>
 
               {/* Semi Deluxe — highlighted */}
-              <div className="bg-primary text-on-primary p-7 rounded-xl flex flex-col shadow-2xl relative overflow-hidden scale-[1.03]">
+              <div className="bg-primary text-on-primary p-7 rounded-xl flex flex-col shadow-2xl relative overflow-hidden md:scale-[1.03]">
                 <div className="absolute top-4 right-4 bg-tertiary text-white text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tight font-bold">Popular</div>
                 <span className="text-[10px] font-bold tracking-widest uppercase text-on-primary/60 mb-2">Umrah</span>
                 <h4 className="text-2xl font-serif mb-1">Semi Deluxe</h4>
