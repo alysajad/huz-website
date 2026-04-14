@@ -38,6 +38,22 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z9RMDM6KCP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z9RMDM6KCP');
+          `}
+        </Script>
+        {/* End Google tag (gtag.js) */}
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${cormorant.variable} ${inter.variable} bg-surface text-on-surface font-sans selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col`}>
