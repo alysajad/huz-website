@@ -40,7 +40,7 @@ const ProfileCardComponent = ({
   className = '',
   enableTilt = false,
   enableMobileTilt = false,
-  mobileTiltSensitivity = 5,
+  mobileTiltSensitivity = '',
   miniAvatarUrl,
   name = 'Javi A. Torres',
   title = 'Software Engineer',
