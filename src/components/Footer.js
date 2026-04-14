@@ -70,6 +70,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="mailto:info@huztourandtravel.com" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
+                  <span className="material-symbols-outlined text-base text-inverse-primary">mail</span>
+                  Email: info@huztourandtravel.com
+                </a>
+              </li>
+              <li>
                 <a href="https://wa.me/918491852752" target="_blank" rel="noopener noreferrer" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-base text-inverse-primary">chat</span>
                   WhatsApp Us
