@@ -7,12 +7,12 @@ import ReviewsSlider from "@/components/ReviewsSlider";
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[96px] pt-[96px]">
+      <section className="relative min-h-[100svh] flex flex-col items-center overflow-hidden pt-[140px] pb-16 h-auto">
         <div className="absolute inset-0 z-0">
           <img alt="Dal Lake Kashmir" className="w-full h-full object-cover md:scale-105" src="/dal_lake_hero.png" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-surface"></div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-5xl">
+        <div className="relative z-10 text-center px-4 max-w-5xl my-auto">
           <h1 className="font-serif text-5xl md:text-8xl font-light text-white mb-6 tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
             Heaven on Earth, <br/>
             <span className="italic">Sacred Lands Beyond</span>
@@ -176,9 +176,9 @@ export default function Home() {
                   <div>
                     <p className="text-sm font-bold text-on-surface mb-1">Phone</p>
                     <div className="flex flex-col gap-1 text-on-surface-variant text-sm">
-                      <a href="tel:+918491852752" className="hover:text-primary transition-colors">+91 8491852752</a>
-                      <a href="tel:+916005322883" className="hover:text-primary transition-colors">+91 6005322883</a>
-                      <a href="tel:+917006480644" className="hover:text-primary transition-colors">+91 7006480644</a>
+                      <a href="tel:+918491852752" className="hover:text-primary transition-colors">Phone No: +91 8491852752</a>
+                      <a href="tel:+916005322883" className="hover:text-primary transition-colors">Office: +91 6005322883</a>
+                      <a href="tel:01951295233" className="hover:text-primary transition-colors">Land line: 01951295233</a>
                     </div>
                   </div>
                 </div>

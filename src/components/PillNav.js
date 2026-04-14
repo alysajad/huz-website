@@ -260,7 +260,7 @@ const PillNav = ({
               height: 'var(--nav-h)',
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className={`h-full w-auto object-contain transform drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform duration-500 ${scrolled ? 'scale-110' : 'scale-125 origin-left'}`} />
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className={`h-[80%] my-auto w-auto object-contain bg-white/95 px-3 py-1.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] transform transition-transform duration-500 ${scrolled ? 'scale-100' : 'scale-110 origin-left'}`} />
           </Link>
         ) : (
           <a
@@ -275,7 +275,7 @@ const PillNav = ({
               height: 'var(--nav-h)',
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className={`h-full w-auto object-contain transform drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform duration-500 ${scrolled ? 'scale-110' : 'scale-125 origin-left'}`} />
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className={`h-[80%] my-auto w-auto object-contain bg-white/95 px-3 py-1.5 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] transform transition-transform duration-500 ${scrolled ? 'scale-100' : 'scale-110 origin-left'}`} />
           </a>
         )}
 

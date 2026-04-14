@@ -54,19 +54,19 @@ export default function Footer() {
               <li>
                 <a href="tel:+918491852752" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-base text-inverse-primary">call</span>
-                  +91 8491852752
+                  Phone No: +91 8491852752
                 </a>
               </li>
               <li>
-                <a href="tel:+916006019773" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
+                <a href="tel:+916005322883" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-base text-inverse-primary">call</span>
-                  +91 6006019773
+                  Office: +91 6005322883
                 </a>
               </li>
               <li>
-                <a href="tel:+917006480644" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
+                <a href="tel:01951295233" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-base text-inverse-primary">call</span>
-                  +91 7006480644
+                  Land line: 01951295233
                 </a>
               </li>
               <li>

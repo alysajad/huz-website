@@ -7,7 +7,7 @@ export default function KashmirPage() {
   return (
     <>
       <main className="">
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[96px] pt-[96px]">
+        <section className="relative min-h-[100svh] flex flex-col items-center overflow-hidden pt-[140px] pb-16 h-auto">
           <div className="absolute inset-0 z-0">
             <img
               alt="Gulmarg in Winter"
@@ -17,7 +17,7 @@ export default function KashmirPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-surface"></div>
             <SnowEffect />
           </div>
-          <div className="relative z-10 text-center px-4 max-w-4xl">
+          <div className="relative z-10 text-center px-4 max-w-4xl my-auto">
             <h1 className="font-serif text-6xl md:text-8xl text-white mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] font-light italic">
               Kashmir: The Heaven on Earth
             </h1>
@@ -28,11 +28,11 @@ export default function KashmirPage() {
 
             <form action="#booking" method="GET" className="glass-panel p-2 rounded-xl shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center gap-2 relative z-20">
               <input type="hidden" name="destination" value="Kashmir" />
-              <div className="flex-1 px-4 py-3 flex flex-col items-start border-r border-outline-variant/30">
+              <div className="flex-1 min-w-[180px] md:min-w-[220px] px-4 py-3 flex flex-col items-start border-r border-outline-variant/30">
                 <span className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">
                   Select Package
                 </span>
-                <select name="tier" defaultValue="Explorer — ₹5,999/person" className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium w-full">
+                <select name="tier" defaultValue="Explorer — ₹5,999/person" className="bg-transparent border-none p-0 pr-8 focus:ring-0 text-on-surface font-medium w-full truncate appearance-none" style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.2em 1.2em` }}>
                   <option value="Explorer — ₹5,999/person">Kashmir Explorer</option>
                   <option value="Classic — ₹10,999/person">Kashmir Classic</option>
                   <option value="Royale — ₹19,999/person">Kashmir Royale</option>

@@ -6,7 +6,7 @@ import BookingForm from "@/components/BookingForm";
 export default function ZiyaratPage() {
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex flex-col items-center overflow-hidden pt-[140px] pb-16 h-auto">
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover"
@@ -15,7 +15,7 @@ export default function ZiyaratPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-surface"></div>
         </div>
-        <div className="relative z-10 text-center px-6 max-w-5xl">
+        <div className="relative z-10 text-center px-6 max-w-5xl my-auto">
           <span className="text-tertiary-fixed text-sm font-label uppercase tracking-[0.3em] mb-4 block">
             Huz Point Tours &amp; Travels
           </span>

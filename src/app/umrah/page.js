@@ -4,7 +4,7 @@ import BookingForm from "@/components/BookingForm";
 export default function UmrahPage() {
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex flex-col items-center overflow-hidden pt-[140px] pb-16 h-auto">
         <div className="absolute inset-0 z-0">
           <img
             alt="Masjid al-Haram at dawn"
@@ -13,7 +13,7 @@ export default function UmrahPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-surface"></div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl">
+        <div className="relative z-10 text-center px-4 max-w-4xl my-auto">
           <span className="inline-block px-4 py-1 mb-6 border border-white/20 bg-white/10 backdrop-blur-md rounded-full text-white text-sm tracking-[0.2em] uppercase font-medium">
             Huz Point Tours &amp; Travels
           </span>
