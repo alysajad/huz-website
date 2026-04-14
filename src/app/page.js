@@ -50,7 +50,10 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-primary mb-4">Kashmir Explorer</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Essential sights including Srinagar, Gulmarg, and the serenity of Pahalgam valleys.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-2xl font-serif text-tertiary">₹5,999</span>
+                  <div>
+                    <span className="text-2xl font-serif text-tertiary">₹5,999</span>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
+                  </div>
                   <Link href="/kashmir" className="text-primary font-bold flex items-center gap-2 group/btn">
                     Details <span className="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
                   </Link>
@@ -68,7 +71,10 @@ export default function Home() {
                 <h3 className="font-serif text-3xl text-primary mb-4">Kashmir Classic</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Full immersion with Shikara rides, heritage tours, and premium houseboat stays.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-3xl font-serif text-tertiary">₹10,999</span>
+                  <div>
+                    <span className="text-3xl font-serif text-tertiary">₹10,999</span>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
+                  </div>
                   <Link href="/kashmir" className="inline-block bg-primary text-on-primary px-5 py-2 rounded text-sm hover:bg-primary-container transition-colors">Book Classic</Link>
                 </div>
               </div>
@@ -83,7 +89,10 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-primary mb-4">Kashmir Royale</h3>
                 <p className="text-on-surface-variant text-sm mb-6 leading-relaxed">Ultra-luxury stay in 5-star resorts, private transfers, and curated off-beat experiences.</p>
                 <div className="flex justify-between items-end">
-                  <span className="text-2xl font-serif text-tertiary">₹19,999</span>
+                  <div>
+                    <span className="text-2xl font-serif text-tertiary">₹19,999</span>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
+                  </div>
                   <Link href="/kashmir" className="text-primary font-bold flex items-center gap-2 group/btn">
                     Details <span className="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
                   </Link>

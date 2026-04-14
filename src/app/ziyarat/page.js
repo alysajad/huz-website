@@ -108,17 +108,20 @@ export default function ZiyaratPage() {
                     <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Economy</p>
                     <p className="text-xl font-headline text-primary font-semibold">₹1,20,000</p>
                     <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                   </div>
                   <div className="rounded-lg border-2 border-primary bg-primary/5 p-4 text-center shadow-md relative cursor-pointer">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tight whitespace-nowrap">Popular</div>
                     <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Semi Deluxe</p>
                     <p className="text-xl font-headline text-primary font-semibold">₹1,30,000</p>
                     <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                   </div>
                   <div className="rounded-lg border border-tertiary/40 bg-tertiary/5 p-4 text-center hover:border-tertiary hover:bg-tertiary/10 transition-all cursor-pointer">
                     <p className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Deluxe</p>
                     <p className="text-xl font-headline text-tertiary font-semibold">₹1,50,000</p>
                     <p className="text-[10px] text-on-surface-variant mt-1">/person</p>
+                    <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                   </div>
                 </div>
                 <a href="#booking" className="w-full mt-6 bg-surface-container-highest text-primary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-center block">
@@ -171,6 +174,7 @@ export default function ZiyaratPage() {
                   ₹1,15,000
                   <span className="text-sm font-body font-normal text-on-primary-container/70 ml-1">/person</span>
                 </p>
+                <span className="block text-[8px] text-on-primary-container/70 uppercase tracking-wider mt-1">(Prices subject to change) — Please Enquire</span>
                 <a href="#booking" className="w-full mt-6 bg-tertiary text-on-tertiary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-tertiary-container transition-all text-center block">
                   Book Arbaeen Walk
                 </a>

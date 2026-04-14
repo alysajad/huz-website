@@ -122,8 +122,11 @@ export default function UmrahPage() {
                 <h4 className="text-3xl font-serif mb-1">Shifting Package</h4>
                 <p className="text-on-primary/70 text-sm mb-8">Full Hajj package with hotel shifting between Mecca, Mina & Arafat. Includes visa, flights, accommodation & Qafila leaders.</p>
                 <div className="mb-8">
-                  <span className="text-5xl font-serif">₹6,50,000</span>
-                  <span className="text-on-primary/60 text-sm ml-1">/person</span>
+                  <div>
+                    <span className="text-5xl font-serif">₹6,50,000</span>
+                    <span className="text-on-primary/60 text-sm ml-1">/person</span>
+                  </div>
+                  <span className="block text-[8px] text-on-primary/80 uppercase tracking-wider mt-1">(Prices subject to change) — Please Enquire</span>
                 </div>
                 <ul className="space-y-3 mb-10 text-left w-full max-w-sm">
                   <li className="flex items-center gap-3 text-sm">
@@ -161,8 +164,11 @@ export default function UmrahPage() {
                 <h4 className="text-2xl font-serif text-primary mb-1">Essential</h4>
                 <p className="text-xs text-outline mb-6 leading-relaxed">Core Umrah — Mecca & Madinah with guided Ziyarat</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-serif text-on-surface">₹1,10,000</span>
-                  <span className="text-outline text-xs ml-1">/person</span>
+                  <div>
+                    <span className="text-4xl font-serif text-on-surface">₹1,10,000</span>
+                    <span className="text-outline text-xs ml-1">/person</span>
+                  </div>
+                  <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow text-sm">
                   <li className="flex items-center gap-2">
@@ -189,8 +195,11 @@ export default function UmrahPage() {
                 <h4 className="text-2xl font-serif text-primary mb-1">Economy</h4>
                 <p className="text-xs text-outline mb-6 leading-relaxed">Essential comfort for devout seekers</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-serif text-on-surface">₹1,20,000</span>
-                  <span className="text-outline text-xs ml-1">/person</span>
+                  <div>
+                    <span className="text-4xl font-serif text-on-surface">₹1,20,000</span>
+                    <span className="text-outline text-xs ml-1">/person</span>
+                  </div>
+                  <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow text-sm">
                   <li className="flex items-center gap-2">
@@ -218,8 +227,11 @@ export default function UmrahPage() {
                 <h4 className="text-2xl font-serif mb-1">Semi Deluxe</h4>
                 <p className="text-xs text-on-primary/70 mb-6 leading-relaxed">The perfect balance of comfort & price</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-serif">₹1,30,000</span>
-                  <span className="text-on-primary/60 text-xs ml-1">/person</span>
+                  <div>
+                    <span className="text-4xl font-serif">₹1,30,000</span>
+                    <span className="text-on-primary/60 text-xs ml-1">/person</span>
+                  </div>
+                  <span className="block text-[8px] text-on-primary/80 uppercase tracking-wider mt-1">(Prices subject to change)<br/>Please Enquire</span>
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow text-sm">
                   <li className="flex items-center gap-2">
@@ -246,8 +258,11 @@ export default function UmrahPage() {
                 <h4 className="text-2xl font-serif text-primary mb-1">Deluxe</h4>
                 <p className="text-xs text-outline mb-6 leading-relaxed">Maximum serenity & premium care</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-serif text-tertiary">₹1,40,000</span>
-                  <span className="text-outline text-xs ml-1">/person</span>
+                  <div>
+                    <span className="text-4xl font-serif text-tertiary">₹1,40,000</span>
+                    <span className="text-outline text-xs ml-1">/person</span>
+                  </div>
+                  <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow text-sm">
                   <li className="flex items-center gap-2">

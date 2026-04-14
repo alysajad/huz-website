@@ -26,16 +26,16 @@ export default function KashmirPage() {
               beyond.
             </p>
 
-            <div className="glass-panel p-2 rounded-xl shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center gap-2">
+            <form action="#booking" method="GET" className="glass-panel p-2 rounded-xl shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center gap-2 relative z-20">
+              <input type="hidden" name="destination" value="Kashmir" />
               <div className="flex-1 px-4 py-3 flex flex-col items-start border-r border-outline-variant/30">
                 <span className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">
-                  Select Destination
+                  Select Package
                 </span>
-                <select defaultValue="Srinagar & Surroundings" className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium w-full">
-                  <option value="Srinagar & Surroundings">Srinagar & Surroundings</option>
-                  <option value="Gulmarg High Peaks">Gulmarg High Peaks</option>
-                  <option value="Pahalgam Valleys">Pahalgam Valleys</option>
-                  <option value="The Full Circuit">The Full Circuit</option>
+                <select name="tier" defaultValue="Explorer — ₹5,999/person" className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium w-full">
+                  <option value="Explorer — ₹5,999/person">Kashmir Explorer</option>
+                  <option value="Classic — ₹10,999/person">Kashmir Classic</option>
+                  <option value="Royale — ₹19,999/person">Kashmir Royale</option>
                 </select>
               </div>
               <div className="flex-1 px-4 py-3 flex flex-col items-start border-r border-outline-variant/30">
@@ -44,12 +44,14 @@ export default function KashmirPage() {
                 </span>
                 <div className="flex items-center gap-2 w-full">
                   <input 
+                    name="fromDate"
                     type="date" 
                     className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium text-xs w-full cursor-pointer" 
                     title="From Date"
                   />
                   <span className="text-on-surface-variant font-medium text-xs">-</span>
                   <input 
+                    name="toDate"
                     type="date" 
                     className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium text-xs w-full cursor-pointer" 
                     title="To Date"
@@ -61,18 +63,20 @@ export default function KashmirPage() {
                   Travelers
                 </span>
                 <input
+                  name="travelers"
                   className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium w-full"
                   type="number"
                   defaultValue={2}
+                  min="1"
                 />
               </div>
-              <a href="#booking" className="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold tracking-widest uppercase text-xs scale-98-on-click transition-all flex items-center justify-center gap-2">
+              <button type="submit" className="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold tracking-widest uppercase text-xs scale-98-on-click transition-all flex items-center justify-center gap-2 cursor-pointer">
                 Check Availability
                 <span className="material-symbols-outlined text-sm">
                   arrow_forward
                 </span>
-              </a>
-            </div>
+              </button>
+            </form>
           </div>
         </section>
 
@@ -143,6 +147,7 @@ export default function KashmirPage() {
                       <span className="text-2xl font-serif text-primary">
                         ₹5,999
                       </span>
+                      <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                     </div>
                     <a href="#booking" className="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
                       View Details{" "}
@@ -198,6 +203,7 @@ export default function KashmirPage() {
                       <span className="text-2xl font-serif text-tertiary">
                         ₹10,999
                       </span>
+                      <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                     </div>
                     <a href="#booking" className="bg-tertiary text-on-tertiary px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-widest scale-98-on-click transition-transform inline-block">
                       Book Classic
@@ -250,6 +256,7 @@ export default function KashmirPage() {
                       <span className="text-2xl font-serif text-primary">
                         ₹19,999
                       </span>
+                      <span className="block text-[8px] text-on-surface-variant uppercase tracking-wider mt-1 opacity-70">(Prices subject to change)<br/>Please Enquire</span>
                     </div>
                     <a href="#booking" className="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
                       Enquire Royale{" "}
