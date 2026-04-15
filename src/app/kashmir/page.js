@@ -3,6 +3,7 @@ import DestinationGuide from "@/components/DestinationGuide";
 import BookingForm from "@/components/BookingForm";
 import SnowEffect from "@/components/SnowEffect";
 
+export default function KashmirPage() {
   const today = new Date().toISOString().split('T')[0];
 
   return (
