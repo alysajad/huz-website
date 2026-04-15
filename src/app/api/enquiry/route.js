@@ -1,26 +1,21 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
     const data = await req.json();
     const { name, email, phone, date, travelers, destination, tier } = data;
 
-    // Create a transporter using environment variables.
-    // User will need to configure EMAIL_PASS (App Password) for Gmail in their deployment (e.g. Vercel/.env)
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER || 'huzpointmagam@gmail.com',
-        pass: process.env.EMAIL_PASS || '', 
-      },
-    });
-
     const enquiryId = `HUZ-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
     const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER || 'huzpointmagam@gmail.com',
-      to: 'info@huztourandtravel.com',
+    // Use Resend to send the email
+    // Note: If you haven't verified your domain on Resend, you MUST use 'onboarding@resend.dev'
+    // Once verified, you can use 'bookings@huztourandtravel.com' or similar.
+    const { data: resendData, error: resendError } = await resend.emails.send({
+      from: 'Huz Point Tours <onboarding@resend.dev>',
+      to: ['info@huztourandtravel.com'],
       subject: `[${enquiryId}] New Enquiry from ${name} - ${destination}`,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5; color: #333; max-width: 600px; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
@@ -37,23 +32,15 @@ export async function POST(req) {
             <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>Travelers:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${travelers}</td></tr>
           </table>
           
-          <p style="font-size: 11px; color: #999; margin-top: 30px; text-align: center;">This is an automated notification from Huz Point Tours & Travels.</p>
+          <p style="font-size: 11px; color: #999; margin-top: 30px; text-align: center;">This is an automated notification from Huz Point Tours & Travels via Resend.</p>
         </div>
       `,
-    };
+    });
 
-    // We use a try-catch for the email sending specifically. 
-    // This ensures that even if SMTP fails (e.g., missing App Password), 
-    // we still return true so the frontend WhatsApp redirect logic can complete.
-    try {
-      if (process.env.EMAIL_PASS || process.env.NODE_ENV === 'production') {
-          await transporter.sendMail(mailOptions);
-          console.log("Email sent successfully!");
-      } else {
-          console.log("Skipping email send in dev because EMAIL_PASS is not configured. Add it to .env.local to test emails.");
-      }
-    } catch (emailError) {
-      console.warn("SMTP email failed (likely missing App Password):", emailError);
+    if (resendError) {
+      console.error('Resend API error:', resendError);
+    } else {
+      console.log('Email sent successfully via Resend:', resendData.id);
     }
 
     return Response.json({ success: true });
