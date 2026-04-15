@@ -3,7 +3,8 @@ import DestinationGuide from "@/components/DestinationGuide";
 import BookingForm from "@/components/BookingForm";
 import SnowEffect from "@/components/SnowEffect";
 
-export default function KashmirPage() {
+  const today = new Date().toISOString().split('T')[0];
+
   return (
     <>
       <main className="">
@@ -46,6 +47,7 @@ export default function KashmirPage() {
                   <input 
                     name="fromDate"
                     type="date" 
+                    min={today}
                     className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium text-xs w-full cursor-pointer" 
                     title="From Date"
                   />
@@ -53,6 +55,7 @@ export default function KashmirPage() {
                   <input 
                     name="toDate"
                     type="date" 
+                    min={today}
                     className="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-medium text-xs w-full cursor-pointer" 
                     title="To Date"
                   />

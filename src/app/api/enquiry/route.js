@@ -17,7 +17,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER || 'huzpointmagam@gmail.com',
-      to: 'huzpointmagam@gmail.com',
+      to: 'info@huztourandtravel.com',
       subject: `New Enquiry from ${name} - ${destination}`,
       html: `
         <h2>New Enquiry Details</h2>

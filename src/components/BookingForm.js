@@ -98,6 +98,8 @@ export default function BookingForm({ defaultPackage = "" }) {
 
   const tiers = selectedPackage ? PACKAGE_TIERS[selectedPackage] || [] : [];
 
+  const today = new Date().toISOString().split('T')[0];
+
   return (
     <div className="bg-surface-container rounded-2xl p-8 shadow-sm border border-outline-variant/30 max-w-4xl mx-auto">
       <div className="mb-8">
@@ -164,6 +166,7 @@ export default function BookingForm({ defaultPackage = "" }) {
                   required
                   name="fromDate"
                   type="date"
+                  min={today}
                   value={fromDate}
                   onChange={(e) => setFromDate(e.target.value)}
                   className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 transition-all text-on-surface"
@@ -177,6 +180,7 @@ export default function BookingForm({ defaultPackage = "" }) {
                   required
                   name="toDate"
                   type="date"
+                  min={fromDate || today}
                   value={toDate}
                   onChange={(e) => setToDate(e.target.value)}
                   className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 transition-all text-on-surface"
