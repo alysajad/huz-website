@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const TeamCard = ({ imageUrl, name, role }) => {
+const TeamCard = ({ imageUrl, name, role, phone }) => {
   return (
     <div className="group relative w-full h-[450px] overflow-hidden rounded-md cursor-pointer flex flex-col justify-end">
       {/* Background Image Container */}
@@ -25,6 +25,12 @@ const TeamCard = ({ imageUrl, name, role }) => {
         <p className="text-xs uppercase tracking-[0.2em] font-medium text-primary mb-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
           {role}
         </p>
+        {phone && (
+          <a href={`tel:${phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-0 group-hover:opacity-100">
+            <span className="material-symbols-outlined text-base">call</span>
+            {phone}
+          </a>
+        )}
       </div>
 
       {/* Deco Border */}
