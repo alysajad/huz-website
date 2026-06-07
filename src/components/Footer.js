@@ -64,9 +64,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+919186232752" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
+                <a href="tel:+918491852779" className="text-inverse-on-surface/60 text-sm hover:text-inverse-on-surface transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-base text-inverse-primary">call</span>
-                  Sales (Sumaira): +91 9186232752
+                  Sales (Sumaira): +91 8491852779
                 </a>
               </li>
               <li>

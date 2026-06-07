@@ -178,7 +178,7 @@ export default function Home() {
                     <div className="flex flex-col gap-1 text-on-surface-variant text-sm">
                       <a href="tel:+918491852752" className="hover:text-primary transition-colors">Phone No: +91 8491852752</a>
                       <a href="tel:+916005322883" className="hover:text-primary transition-colors">Office: +91 6005322883</a>
-                      <a href="tel:+919186232752" className="hover:text-primary transition-colors">Sales (Sumaira): +91 9186232752</a>
+                      <a href="tel:+918491852779" className="hover:text-primary transition-colors">Sales (Sumaira): +91 8491852779</a>
                       <a href="tel:01951295233" className="hover:text-primary transition-colors">Land line: 01951295233</a>
                     </div>
                   </div>
@@ -281,7 +281,7 @@ export default function Home() {
             <TeamCard 
               name="Mrs. Sumaira" 
               role="Sales Manager" 
-              phone="+91 9186232752"
+              phone="+91 8491852779"
               imageUrl="/sumaira.png"
             />
             <TeamCard 
