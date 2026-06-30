@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Real package tiers per destination — matches pricing on each page
 const PACKAGE_TIERS = {
@@ -22,7 +22,8 @@ const PACKAGE_TIERS = {
     "Grand Ziyarat (Iraq + Iran) Economy — ₹1,20,000/person",
     "Grand Ziyarat (Iraq + Iran) Semi Deluxe — ₹1,30,000/person",
     "Grand Ziyarat (Iraq + Iran) Deluxe — ₹1,50,000/person",
-    "Arbaeen Walk 15 Days — ₹1,15,000/person",
+    "Arbaeen Walk 17 Days (Delhi to Delhi) — ₹1,15,000/person",
+    "Arbaeen Walk 17 Days (Srinagar to Srinagar) — ₹1,30,000/person",
   ],
 };
 
@@ -35,13 +36,22 @@ export default function BookingForm({ defaultPackage = "" }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    // Parse URL parameters and construct pre-filled form values
+    // Parse URL parameters on mount for pre-filled form values
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has("destination")) setSelectedPackage(searchParams.get("destination"));
     if (searchParams.has("tier")) setTier(searchParams.get("tier"));
     if (searchParams.has("fromDate")) setFromDate(searchParams.get("fromDate"));
     if (searchParams.has("toDate")) setToDate(searchParams.get("toDate"));
     if (searchParams.has("travelers")) setTravelers(searchParams.get("travelers"));
+
+    // Listen for in-page pre-fill events (e.g. from package cards)
+    const handlePrefill = (e) => {
+      const { destination, tier: t } = e.detail;
+      if (destination) setSelectedPackage(destination);
+      if (t) setTier(t);
+    };
+    window.addEventListener("prefill-booking", handlePrefill);
+    return () => window.removeEventListener("prefill-booking", handlePrefill);
   }, []);
 
   const handlePackageChange = (e) => {
@@ -98,7 +108,36 @@ export default function BookingForm({ defaultPackage = "" }) {
 
   const tiers = selectedPackage ? PACKAGE_TIERS[selectedPackage] || [] : [];
 
-  const today = new Date().toISOString().split('T')[0];
+  // Refs for hidden native date pickers
+  const fromDateRef = useRef(null);
+  const toDateRef = useRef(null);
+
+  // Convert yyyy-mm-dd (native picker) to dd/mm/yyyy (display)
+  const isoToDisplay = (iso) => {
+    if (!iso) return "";
+    const [y, m, d] = iso.split("-");
+    return `${d}/${m}/${y}`;
+  };
+
+  // Convert dd/mm/yyyy (display) to yyyy-mm-dd (native picker)
+  const displayToIso = (display) => {
+    if (!display || display.length !== 10) return "";
+    const [d, m, y] = display.split("/");
+    return `${y}-${m}-${d}`;
+  };
+
+  // Auto-format dd/mm/yyyy as user types
+  const handleDateInput = (value, setter) => {
+    let digits = value.replace(/\D/g, "");
+    if (digits.length > 4) digits = digits.slice(0, 2) + "/" + digits.slice(2, 4) + "/" + digits.slice(4, 8);
+    else if (digits.length > 2) digits = digits.slice(0, 2) + "/" + digits.slice(2);
+    setter(digits);
+  };
+
+  // Handle native date picker selection
+  const handleNativeDateChange = (e, setter) => {
+    setter(isoToDisplay(e.target.value));
+  };
 
   return (
     <div className="bg-surface-container rounded-2xl p-8 shadow-sm border border-outline-variant/30 max-w-4xl mx-auto">
@@ -162,29 +201,61 @@ export default function BookingForm({ defaultPackage = "" }) {
                 <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
                   From Date
                 </label>
-                <input
-                  required
-                  name="fromDate"
-                  type="date"
-                  min={today}
-                  value={fromDate}
-                  onChange={(e) => setFromDate(e.target.value)}
-                  className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 transition-all text-on-surface"
-                />
+                <div className="relative flex items-center">
+                  <input
+                    required
+                    name="fromDate"
+                    type="text"
+                    inputMode="numeric"
+                    placeholder="dd/mm/yyyy"
+                    maxLength={10}
+                    pattern="\d{2}/\d{2}/\d{4}"
+                    value={fromDate}
+                    onChange={(e) => handleDateInput(e.target.value, setFromDate)}
+                    className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 pr-11 transition-all text-on-surface"
+                  />
+                  <div className="absolute right-3 flex items-center justify-center w-6 h-6">
+                    <span className="material-symbols-outlined text-xl text-on-surface-variant/60">calendar_month</span>
+                    <input
+                      ref={fromDateRef}
+                      type="date"
+                      tabIndex={-1}
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                      value={displayToIso(fromDate)}
+                      onChange={(e) => handleNativeDateChange(e, setFromDate)}
+                    />
+                  </div>
+                </div>
               </div>
               <div>
                 <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
                   To Date
                 </label>
-                <input
-                  required
-                  name="toDate"
-                  type="date"
-                  min={fromDate || today}
-                  value={toDate}
-                  onChange={(e) => setToDate(e.target.value)}
-                  className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 transition-all text-on-surface"
-                />
+                <div className="relative flex items-center">
+                  <input
+                    required
+                    name="toDate"
+                    type="text"
+                    inputMode="numeric"
+                    placeholder="dd/mm/yyyy"
+                    maxLength={10}
+                    pattern="\d{2}/\d{2}/\d{4}"
+                    value={toDate}
+                    onChange={(e) => handleDateInput(e.target.value, setToDate)}
+                    className="w-full bg-surface border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 pr-11 transition-all text-on-surface"
+                  />
+                  <div className="absolute right-3 flex items-center justify-center w-6 h-6">
+                    <span className="material-symbols-outlined text-xl text-on-surface-variant/60">calendar_month</span>
+                    <input
+                      ref={toDateRef}
+                      type="date"
+                      tabIndex={-1}
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                      value={displayToIso(toDate)}
+                      onChange={(e) => handleNativeDateChange(e, setToDate)}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 

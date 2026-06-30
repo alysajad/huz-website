@@ -1,9 +1,11 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import BookingForm from "@/components/BookingForm";
 
 export default function ZiyaratPage() {
+  const [selectedRoute, setSelectedRoute] = useState("");
   return (
     <>
       <section className="relative min-h-[100svh] flex flex-col items-center overflow-hidden pt-[140px] pb-16 h-auto">
@@ -137,7 +139,7 @@ export default function ZiyaratPage() {
               </div>
               <div className="mb-6">
                 <span className="text-xs font-label uppercase tracking-widest text-on-primary-container/80 font-semibold">
-                  Iraq Only · Special Edition
+                  Iraq · Ziyarat · Special Edition
                 </span>
                 <h3 className="font-headline text-3xl text-on-primary-container mt-2">
                   Arbaeen Walk
@@ -146,14 +148,22 @@ export default function ZiyaratPage() {
                   The world's largest annual peaceful gathering — the sacred 80km walk from Najaf to Karbala, honouring Imam Hussain (a.s).
                 </p>
               </div>
-              <ul className="space-y-4 mb-12 flex-grow">
+              <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined text-tertiary mt-0.5">directions_walk</span>
                   <span className="text-sm font-body text-on-primary-container/90">The 80km Najaf to Karbala walk</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined text-tertiary mt-0.5">calendar_today</span>
-                  <span className="text-sm font-body text-on-primary-container/90">15 Days full itinerary</span>
+                  <span className="text-sm font-body text-on-primary-container/90">17 Days full itinerary</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">flight_takeoff</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Departure: 29 July 2026 from Srinagar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">flight_land</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Arrival: 14 August 2026</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined text-tertiary mt-0.5">support_agent</span>
@@ -167,17 +177,73 @@ export default function ZiyaratPage() {
                   <span className="material-symbols-outlined text-tertiary mt-0.5">night_shelter</span>
                   <span className="text-sm font-body text-on-primary-container/90">Mawkib arrangements & spiritual majalis</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-tertiary mt-0.5">verified</span>
+                  <span className="text-sm font-body text-on-primary-container/90">Under supervision of Haji Mohammad Ashraf Sofi (Trusted Since 1998)</span>
+                </li>
               </ul>
+
+              {/* Two pricing tiers — selectable */}
               <div className="pt-6 border-t border-white/10">
-                <p className="text-sm font-label text-on-primary-container/60 uppercase mb-1">Investment</p>
-                <p className="text-4xl font-headline text-on-primary-container font-semibold">
-                  ₹1,15,000
-                  <span className="text-sm font-body font-normal text-on-primary-container/70 ml-1">/person</span>
-                </p>
-                <span className="block text-[8px] text-on-primary-container/70 uppercase tracking-wider mt-1">(Prices subject to change) — Please Enquire</span>
-                <a href="#booking" className="w-full mt-6 bg-tertiary text-on-tertiary py-3 rounded-md font-label text-xs uppercase tracking-widest hover:bg-tertiary-container transition-all text-center block">
-                  Book Arbaeen Walk
-                </a>
+                <p className="text-sm font-label text-on-primary-container/60 uppercase mb-4 tracking-widest">Select Your Route</p>
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div
+                    onClick={() => setSelectedRoute("delhi")}
+                    className={`rounded-lg border-2 p-4 text-center cursor-pointer transition-all relative ${
+                      selectedRoute === "delhi"
+                        ? "border-tertiary bg-tertiary/15 ring-2 ring-tertiary/40 shadow-lg"
+                        : "border-on-primary-container/20 bg-on-primary-container/5 hover:border-tertiary hover:bg-tertiary/10"
+                    }`}
+                  >
+                    {selectedRoute === "delhi" && (
+                      <div className="absolute top-2 right-2">
+                        <span className="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                      </div>
+                    )}
+                    <p className="text-[10px] font-label uppercase tracking-widest text-on-primary-container/70 mb-1">Delhi to Delhi</p>
+                    <p className="text-2xl font-headline text-on-primary-container font-semibold">₹1,15,000</p>
+                    <p className="text-[10px] text-on-primary-container/60 mt-1">/person</p>
+                  </div>
+                  <div
+                    onClick={() => setSelectedRoute("srinagar")}
+                    className={`rounded-lg border-2 p-4 text-center relative cursor-pointer transition-all ${
+                      selectedRoute === "srinagar"
+                        ? "border-tertiary bg-tertiary/15 ring-2 ring-tertiary/40 shadow-lg"
+                        : "border-on-primary-container/20 bg-on-primary-container/5 hover:border-tertiary hover:bg-tertiary/10"
+                    }`}
+                  >
+                    {selectedRoute === "srinagar" && (
+                      <div className="absolute top-2 right-2">
+                        <span className="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                      </div>
+                    )}
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-tertiary text-on-tertiary text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tight whitespace-nowrap">Srinagar</div>
+                    <p className="text-[10px] font-label uppercase tracking-widest text-on-primary-container/70 mb-1">Srinagar to Srinagar</p>
+                    <p className="text-2xl font-headline text-on-primary-container font-semibold">₹1,30,000</p>
+                    <p className="text-[10px] text-on-primary-container/60 mt-1">/person</p>
+                  </div>
+                </div>
+                <span className="block text-[8px] text-on-primary-container/70 uppercase tracking-wider mb-4">(Prices subject to change) — Please Enquire</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (!selectedRoute) return;
+                    const tier = selectedRoute === "delhi"
+                      ? "Arbaeen Walk 17 Days (Delhi to Delhi) \u2014 \u20b91,15,000/person"
+                      : "Arbaeen Walk 17 Days (Srinagar to Srinagar) \u2014 \u20b91,30,000/person";
+                    window.dispatchEvent(new CustomEvent("prefill-booking", {
+                      detail: { destination: "Ziyarat", tier }
+                    }));
+                    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className={`w-full py-3 rounded-md font-label text-xs uppercase tracking-widest transition-all text-center block ${
+                    selectedRoute
+                      ? "bg-tertiary text-on-tertiary hover:bg-tertiary-container cursor-pointer"
+                      : "bg-tertiary/40 text-on-tertiary/50 cursor-not-allowed"
+                  }`}
+                >
+                  {selectedRoute ? "Book Arbaeen Walk" : "Select a route above"}
+                </button>
               </div>
             </div>
 
